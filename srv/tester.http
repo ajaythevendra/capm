@@ -86,6 +86,9 @@ GET http://localhost:4004/odata/v4/MyService/ReadEmployeeSrv
 ###Get All POs using adpater proxy v2
 http://localhost:4004/v2/odata/v4/CatalogService/POs
 
+###v2
+http://localhost:4004/v2/CatalogService
+
 ###Testing Security : authorization, authentication
 http://localhost:4004/v2/odata/v4/CatalogService/EmployeeSet
 Authorization: Basic jack:

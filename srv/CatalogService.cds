@@ -14,7 +14,11 @@ service CatalogService @(path: 'CatalogService') {
     )
      as projection on transaction.purchaseorder{
         *,
+        round(GROSS_AMOUNT, 2) as GROSS_AMOUNT: Decimal (15,2),
         Items: redirected to POItems
+     }actions{
+        function largestOrder() returns array of POs;
+        action boost();
      }
     
     entity POItems @( title : '{i18n>poItems}' )
